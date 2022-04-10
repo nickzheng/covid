@@ -1,0 +1,49 @@
+{
+  "name:": "covid",
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx ./",
+    "prettier": "prettier -c --write \"**/*\"",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "@ant-design/charts": "^0.9.13",
+    "@ant-design/pro-table": "^2.71.6",
+    "@googlemaps/react-wrapper": "^1.1.30",
+    "@googlemaps/typescript-guards": "^1.0.12",
+    "dayjs": "^1.11.1",
+    "fast-equals": "^3.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "soda-js": "^0.2.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "i": "^0.3.7",
+    "lint-staged": "^7.2.2",
+    "npm": "^6.14.15",
+    "umi": "^2.7.7",
+    "umi-plugin-react": "^1.8.4"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "npm run lint",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
