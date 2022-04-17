@@ -19,7 +19,10 @@ export const getPoints = ({ where = {}, limit = 1000000, offset = 0, order, sele
     query
       .getRows()
       .on('success', (rows) => resolve(rows))
-      .on('error', (error) => reject(error));
+      .on('error', (error) => {
+        console.log('error', error);
+        reject(error);
+      });
   });
 };
 
